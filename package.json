@@ -7,6 +7,5 @@
   },
   "dependencies": {
     "node-fetch": "^3.2.3"
-  },
-  "type": "commonjs"
+  }
 }
