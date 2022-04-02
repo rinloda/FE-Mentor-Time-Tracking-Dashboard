@@ -129,123 +129,134 @@
           </div>
           <div class="time-area h-full bg-blue-dark border-solid rounded-xl flex items-end"> 
             <ul class="time mx-5 my-3 text-blue-desaturated text-sm leading-10">
-              <li class="daily" id="daily">Daily</li>
-              <li class="weekly text-white" id="weekly" actived>Weekly</li>
-              <li class="monthly" id="monthly">Monthly</li>
+              <li >
+                <button type="button" class="dailyBtn focus:text-white" id="dailyBtn">Daily</button>
+              </li>
+              <li>
+                <button type="button" class="weeklyBtn focus:text-white" autofocus id="weeklyBtn" >Weekly</button>
+              </li>
+              <li>
+                <button type="button" class="monthlyBtn focus:text-white" id="monthlyBtn">Weekly</button>
+              </li>
             </ul>
           </div>
         </div>
         
-        <div class="work-component h-full relative flex">
-          <div class="work-rear w-full h-3/4 bg-red-work flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-work h-2/5 mx-5" src="./images/icon-work.svg" alt="icon work">
-          </div>
-          <div class="work-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="work-content mx-5 my-5">
-              <div class="work-header flex justify-between">
-                <h6 class="text-white">Work</h6>
-
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
+        <div class="six-component col-span-3 grid grid-cols-3 row-span-2 gap-4">
+          <div class="work-component h-full relative flex">
+            <div class="work-rear w-full h-3/4 bg-red-work flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-work h-2/5 mx-5" src="./images/icon-work.svg" alt="icon work">
+            </div>
+            <div class="work-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="work-content mx-5 my-5">
+                <div class="work-header flex justify-between">
+                  <h6 class="text-white">Work</h6>
+  
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="work-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="workData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-workData"></span>hrs</p>
+                </div>
               </div>
-              <div class="work-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-work"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-work"></span>hrs</p>
+            </div>
+          </div>
+  
+          <div class="play-component h-full relative flex ">
+            <div class="play-rear w-full h-3/4 bg-blue-play flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-play h-2/5 mx-5" src="./images/icon-play.svg" alt="icon play">
+            </div>
+            <div class="play-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="play-content mx-5 my-5">
+                <div class="play-header flex justify-between">
+                  <h6 class="text-white">Play</h6>
+  
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="play-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="playData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-playData"></span>hrs</p>
+                </div>
+              </div>
+            </div>
+          </div>        
+  
+          <div class="study-component h-full relative flex">
+            <div class="study-rear w-full h-3/4 bg-red-study flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-study h-2/5 mx-5" src="./images/icon-study.svg" alt="icon study">
+            </div>
+            <div class="study-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="study-content mx-5 my-5">
+                <div class="study-header flex justify-between">
+                  <h6 class="text-white">Study</h6>
+  
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="study-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="studyData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-studyData"></span>hrs</p>
+                </div>
+              </div>
+            </div>
+          </div>        
+          
+          <div class="exercise-component h-full relative flex">
+            <div class="exercise-rear w-full h-3/4 bg-green-exercise flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-exercise h-2/6 mx-5" src="./images/icon-exercise.svg" alt="icon exercise">
+            </div>
+            <div class="exercise-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="exercise-content mx-5 my-5">
+                <div class="exercise-header flex justify-between">
+                  <h6 class="text-white">Exercise</h6>
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="exercise-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="exerciseData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-exerciseData"></span>hrs</p>
+                </div>
+              </div>
+            </div>
+          </div>        
+          
+          <div class="social-component h-full relative flex ">
+            <div class="social-rear w-full h-3/4 bg-violet-social flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-social h-2/5 mx-5" src="./images/icon-social.svg" alt="icon social">
+            </div>
+            <div class="social-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="social-content mx-5 my-5">
+                <div class="social-header flex justify-between">
+                  <h6 class="text-white">Social</h6>
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="social-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="socialData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-socialData"></span>hrs</p>
+                </div>
+              </div>
+            </div>
+          </div>        
+          
+          <div class="selfCare-component h-full relative flex">
+            <div class="selfCare-rear h-3/4 w-full bg-orange-selfCare flex justify-end absolute border-solid rounded-xl">
+              <img class="icon-selfCare h-2/6 mx-5" src="./images/icon-self-care.svg" alt="icon self Care">
+            </div>
+            <div class="selfCare-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
+              <div class="selfCare-content mx-5 my-5">
+                <div class="selfCare-header flex justify-between">
+                  <h6 class="text-white">Self Care</h6>
+                  <img class="self-center" src="./images/icon-ellipsis.svg" />
+                </div>
+                <div class="selfCare-data py-5">
+                  <h3 class="text-white text-5xl font-thin py-2"><span id="selfCareData"></span>hrs</h3>
+                  <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-selfCareData"></span>hrs</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="play-component h-full relative flex ">
-          <div class="play-rear w-full h-3/4 bg-blue-play flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-play h-2/5 mx-5" src="./images/icon-play.svg" alt="icon play">
-          </div>
-          <div class="play-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="play-content mx-5 my-5">
-              <div class="play-header flex justify-between">
-                <h6 class="text-white">Play</h6>
-
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
-              </div>
-              <div class="play-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-play"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-play"></span>hrs</p>
-              </div>
-            </div>
-          </div>
-        </div>        
-
-        <div class="study-component h-full relative flex">
-          <div class="study-rear w-full h-3/4 bg-red-study flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-study h-2/5 mx-5" src="./images/icon-study.svg" alt="icon study">
-          </div>
-          <div class="study-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="study-content mx-5 my-5">
-              <div class="study-header flex justify-between">
-                <h6 class="text-white">Study</h6>
-
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
-              </div>
-              <div class="study-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-study"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-study"></span>hrs</p>
-              </div>
-            </div>
-          </div>
-        </div>        
+      
         
-        <div class="exercise-component h-full relative flex">
-          <div class="exercise-rear w-full h-3/4 bg-green-exercise flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-exercise h-2/6 mx-5" src="./images/icon-exercise.svg" alt="icon exercise">
-          </div>
-          <div class="exercise-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="exercise-content mx-5 my-5">
-              <div class="exercise-header flex justify-between">
-                <h6 class="text-white">Exercise</h6>
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
-              </div>
-              <div class="exercise-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-exercise"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-exercise"></span>hrs</p>
-              </div>
-            </div>
-          </div>
-        </div>        
-        
-        <div class="social-component h-full relative flex ">
-          <div class="social-rear w-full h-3/4 bg-violet-social flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-social h-2/5 mx-5" src="./images/icon-social.svg" alt="icon social">
-          </div>
-          <div class="social-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="social-content mx-5 my-5">
-              <div class="social-header flex justify-between">
-                <h6 class="text-white">Social</h6>
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
-              </div>
-              <div class="social-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-social"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-social"></span>hrs</p>
-              </div>
-            </div>
-          </div>
-        </div>        
-        
-        <div class="selfCare-component h-full relative flex">
-          <div class="selfCare-rear h-3/4 w-full bg-orange-selfCare flex justify-end absolute border-solid rounded-xl">
-            <img class="icon-selfCare h-2/6 mx-5" src="./images/icon-self-care.svg" alt="icon self Care">
-          </div>
-          <div class="selfCare-front w-full h-4/5 bg-blue-dark absolute z-10 self-end border-solid rounded-xl">
-            <div class="selfCare-content mx-5 my-5">
-              <div class="selfCare-header flex justify-between">
-                <h6 class="text-white">Self Care</h6>
-                <img class="self-center" src="./images/icon-ellipsis.svg" />
-              </div>
-              <div class="selfCare-data py-5">
-                <h3 class="text-white text-5xl font-thin py-2"><span id="weekly-selfCare"></span>hrs</h3>
-                <p class="text-blue-pale text-sm font-thin">Last week - <span id="pre-weekly-selfCare"></span>hrs</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </main>
